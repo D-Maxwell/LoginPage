@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+
+    <div id="form" class="flex">
+
+      <div class="flex title">
+        <span>Login</span>
+      </div>
+
+      <div class="flex textField">
+        <!-- onkeyup required cuz you can't check if an input field is empty -->
+        <input type="text" value="" onkeyup="this.setAttribute('value', this.value);">
+        <span>Email adress</span>
+      </div>
+
+      <div class="flex textField">
+        <input type="text" value="" onkeyup="this.setAttribute('value', this.value);">
+        <span>Password</span>
+      </div>
+
+      <div class="flex button">
+        <button type="button">Login</button>
+      </div>
+
+
+    </div>
+
+
+
+    <script> </script>
+
+  </body>
+</html>
