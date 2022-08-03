@@ -57,6 +57,7 @@ span{
   animation: colorSlide 2s infinite;
   z-index: -1;
   border-radius: 12px;
+  box-shadow: 0 0 4px white;
 }
 
 @keyframes colorSlide {
@@ -162,7 +163,7 @@ span{
   user-select: none;
   transition: filter 400ms;
 }
-#form div.button button:hover{
+#form div.button button:hover, #form div.button button:focus-visible  {
   /* animation: colorSlide 2s infinite; */
   filter: grayscale(0);
 }
