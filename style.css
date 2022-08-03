@@ -12,8 +12,7 @@ html, body{
 
 body{
   display: flex;
-  align-items: center;
-  justify-content: center;
+  position: relative;
 
   background-image: radial-gradient(#353b48,#282C34);
   font-family: "bahnschrift", "Verdana";
@@ -26,7 +25,13 @@ div.flex{
 span{
   /* font-family: "bahnschrift", "Verdana"; */
 }
-
+div.wrapper{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
 
 
 
@@ -34,8 +39,8 @@ span{
 
 #form{
   position: relative;
-  /* width: 30vw;
-  height: 60vh; */
+  /* width: clamp(300px, 20vw, 400px); */
+  /* height: clamp(250px, 20vw, 300px); */
   flex-direction: column;
   box-sizing: border-box;
   background-color: #F2F2F2;
@@ -101,7 +106,11 @@ span{
   margin: 0.25em 0;
   font-size: 13px;
   flex-direction: column-reverse;
+  align-items: center;
   /* mask-clip: text; */
+}
+#form div.textField *{
+  width: clamp(100px, 75%, 200px);
 }
 
 #form div.textField input{
@@ -128,7 +137,7 @@ span{
 
 
 #form div.textField span{
-  width: fit-content;
+  /* width: fit-content; */
   color: darkgray;
   transform: translate(6px,128%);
   transition: transform 200ms;
@@ -163,14 +172,15 @@ span{
   background-color: transparent;
   overflow: hidden;
   user-select: none;
-  transition: 400ms;
-}
-#form div.button button:hover, #form div.button button:focus-visible  {
-  /* animation: colorSlide 2s infinite; */
-  filter: grayscale(0);
   background-image: linear-gradient(#FF00FF, #00ffff);
   background-clip: text;
   -webkit-background-clip: text;
+  color: rgba(0,0,0,0.6);
+  transition: 400ms;
+}
+#form div.button button:hover, #form div.button button:focus-visible{
+  /* animation: colorSlide 2s infinite; */
+  filter: grayscale(0);
   color: transparent;
 }
 #form div.button button:focus{
